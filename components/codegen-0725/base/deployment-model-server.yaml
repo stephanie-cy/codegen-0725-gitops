@@ -25,7 +25,7 @@ spec:
       initContainers:
       - name: model-file
         image: quay.io/redhat-ai-dev/mistral-7b-code-16k-qlora:latest
-        command: /usr/bin/install,/model/model.file,/shared/
+        command: ['/usr/bin/install','/model/model.file','/shared/']
         volumeMounts:
         - name: model-file
           mountPath: /shared
